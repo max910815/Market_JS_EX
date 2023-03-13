@@ -88,7 +88,7 @@
 
             drawPieChart(companies, data);
             
-            tables = document.getElementById("table-bordered");
+            tables = document.querySelector(".table");
             thead = document.createElement("thead");
             tbody = document.createElement("tbody");
 
@@ -164,9 +164,9 @@
             globalMarket.forEach(items => {
                 let tr = document.createElement("tr");
                 items.forEach(item => {
-                    let tp = document.createElement("tp");
-                    tp.innerText = item;
-                    tr.append(tp);
+                    let td = document.createElement("td");
+                    td.innerText = item;
+                    tr.append(td);
                 })
                 tbody.append(tr);
             });
